@@ -42,8 +42,8 @@ const signConfig = {
 
 */
 
-const authSign = jwt.sign({ id: 1, name: 'Ragnelli' }, privateKey, signConfig)
-const { id, name } = jwt.verify(authSign, publicKey)
+const authSign = jwt.sign({ id: 1, name: 'Ragnelli' }, privateKey, signConfig) // Token JWT gerado
+const { id, name } = jwt.verify(authSign, publicKey) // Dados gerados após validação do token com a chave pública
 
 console.log('JWT', authSign)
 console.log('\nDecodificação\n', `id: ${id}, name: ${name}`)
